@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Mahasiswa USU</title>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo-usu.png" alt="Logo USU">
+            <div>
+                <p>SATU Mahasiswa</p>
+                <small>Universitas Sumatera Utara</small>
+            </div>
+        </div>
+        <div class="center">
+            <p>Semester Ganjil T.A 2024/2025</p>
+            <p id="date"></p>
+        </div>
+        <div class="user-info">
+            <div class="icon">
+                <i class="fa fa-user-circle"></i>
+            </div>
+            <div>
+                <p>Hizkia Siahaan</p>
+                <p>231712045</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
+                <li><a href="#"><i class="fa fa-credit-card"></i> Tagihan Akademik</a></li>
+                <li><a href="#"><i class="fa fa-book"></i> Mata Kuliah Ditawarkan</a></li>
+                <li><a href="#"><i class="fa fa-cogs"></i> Kelola KRS</a></li>
+                <li><a href="#"><i class="fa fa-calendar"></i> Semester Antar</a></li>
+                <li><a href="#"><i class="fa fa-book"></i> Jadwal Ujian</a></li>
+                <li><a href="#"><i class="fa fa-file"></i> Informasi KHS</a></li>
+                <li><a href="#"><i class="fa fa-search"></i> Survei</a></li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i> Bimbingan Akademik</a></li>
+                <li><a href="#"><i class="fa fa-cogs"></i> Banding UKT</a></li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i> Wisuda</a></li>
+                <li><a href="#"><i class="fa fa-users"></i> Aktivitas Mahasiswa</a></li>
+                <li><a href="#"><i class="fa fa-exclamation-circle"></i> Pengaduan</a></li>
+            </ul>
+        </aside>
+        <section class="main-content">
+            <div class="breadcrumb">
+                <a href="#">Beranda</a> <span>&gt;</span> <a href="bimbingan_akademik.html">Bimbingan Akademik</a>
+            </div>
+            <div class="content-title">Bimbingan Akademik</div>
+            <div class="content">
+                <strong>Dosen PA:</strong> Dr. Sawaluddin M.IT
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Semester</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Semester Ganjil T.A. 2023/2024</td>
+                            <td><span class="badge badge-success">SKS Disetujui</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <span class="badge badge-warning">SKS Berlebih</span>
+                                    <a href="bimbingan_akademik.html" class="btn btn-primary">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Semester Genap T.A. 2023/2024</td>
+                            <td><span class="badge badge-success">KRS Disetujui</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-disabled">Ajukan</button>
+                                    <button class="btn btn-primary">
+                                        <i class="fa fa-eye"></i> <!-- Ikon untuk "Lihat" -->
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Semester Ganjil T.A. 2024/2025</td>
+                            <td><span class="badge badge-success">KRS Disetujui</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-disabled">Ajukan</button>
+                                    <button class="btn btn-primary">
+                                        <i class="fa fa-eye"></i> <!-- Ikon untuk "Lihat" -->
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <footer>
+                <div class="footer-content">
+                    <p>&copy; 2024 Universitas Sumatera Utara | All Rights Reserved</p>
+                </div>
+            </footer>
+        </section>
+
+    </main>
+
+    <script>
+        const dateElement = document.getElementById("date");
+        const date = new Date();
+        const dateString = date.toLocaleDateString('id-ID', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        dateElement.textContent = dateString;
+    </script>
+</body>
+
+</html>
